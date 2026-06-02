@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@import url("https://cdn.jsdelivr.net/npm/geist-font@latest/style.css");
+
+body {
+  font-family: 'Geist Sans', sans-serif;
+}
