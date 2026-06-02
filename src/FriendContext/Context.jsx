@@ -1,6 +1,7 @@
 // import React from 'react';
 
 import { createContext, useState } from "react";
+import { toast } from "react-toastify";
 
 export const listedFriendContext=createContext()
 
@@ -15,11 +16,11 @@ const Context = ({children}) => {
                 const isExistFriend=storedFriends.find((friend)=>friend.id=== currentFriend.id &&
                 friend.actionType === "Call")
                 if(isExistFriend){
-                    alert('This friend is already in timeline')
+                    toast.error(`${currentFriend.name} is already called`)
         
                 }
                 else{
-                    alert('This friend is successfully saved in timeline')
+                    toast.success(`Call with ${currentFriend.name}`)
                    setStoredFriends([...storedFriends,{
                         ...currentFriend,
                         actionType: "Call",
@@ -36,11 +37,11 @@ const Context = ({children}) => {
                 const isExistFriend=storedFriends.find((friend)=>friend.id=== currentFriend.id &&
                 friend.actionType === "Text")
                 if(isExistFriend){
-                    alert(`Already texted ${currentFriend.name}`)
+                     toast.error(`${currentFriend.name} is already texted`)
         
                 }
                 else{
-                    alert(`Texted ${currentFriend.name}`)
+                     toast.success(`Text with ${currentFriend.name}`)
                    setStoredFriends([...storedFriends,{
                         ...currentFriend,
                         actionType: "Text",
@@ -57,11 +58,11 @@ const Context = ({children}) => {
                 const isExistFriend=storedFriends.find((friend)=>friend.id=== currentFriend.id &&
                 friend.actionType === "Video")
                 if(isExistFriend){
-                    alert(`Already video with ${currentFriend.name}`)
+                    toast.error(`Already video with ${currentFriend.name}`)
         
                 }
                 else{
-                    alert(`${currentFriend.name} is  Video Called`)
+                    toast.success(`Video with ${currentFriend.name}`)
                    setStoredFriends([...storedFriends,{
                         ...currentFriend,
                         actionType: "Video",

@@ -4,6 +4,7 @@ import './index.css'
 import { RouterProvider } from 'react-router'
 import { router } from './Router/Router'
 import Context from './FriendContext/Context'
+import { ToastContainer } from 'react-toastify'
 
 
 createRoot(document.getElementById('root')).render(
@@ -11,6 +12,9 @@ createRoot(document.getElementById('root')).render(
     <Context>
 
     <RouterProvider router={router}/>
+     <ToastContainer
+     position="top-center"
+      autoClose={3000}/>
 
     </Context>
 
