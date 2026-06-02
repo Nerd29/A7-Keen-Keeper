@@ -4,6 +4,7 @@ import { createBrowserRouter } from 'react-router';
 import HomePage from '../components/pages/HomePage/HomePage';
 import ErrorPage from '../components/pages/ErrorPage/ErrorPage';
 import TimeLine from '../components/TimeLine/TimeLine';
+import FriendDetails from '../components/pages/FriendDetails/FriendDetails';
 
 export const router=createBrowserRouter([
   {
@@ -17,6 +18,10 @@ export const router=createBrowserRouter([
     {
       path:'/timeLine',
       element:<TimeLine></TimeLine>
+    },
+    {
+      path:'/friendDetails/:friendId',
+      element:<FriendDetails></FriendDetails>
     }
     ],errorElement:<ErrorPage/>
   }

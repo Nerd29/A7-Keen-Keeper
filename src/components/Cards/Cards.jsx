@@ -1,8 +1,10 @@
 // import React from 'react';
 
+import { Link } from "react-router";
+
 const Cards = ({friend}) => {
     return (
-        <div className="card bg-base-100 w-96 shadow-sm rounded-xl p-4 ">
+        <Link to={`/friendDetails/${friend.id}`} className="card bg-base-100 w-96 shadow-sm  rounded-xl p-4  hover:bg-green-100 transition ">
   <figure >
     <img className="rounded-full"
       src={friend.picture}
@@ -22,7 +24,7 @@ const Cards = ({friend}) => {
     </div>
     
   </div>
-</div>
+</Link>
     );
 };
 
