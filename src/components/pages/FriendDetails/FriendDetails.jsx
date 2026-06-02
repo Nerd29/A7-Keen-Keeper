@@ -1,10 +1,11 @@
-import { use } from "react";
+import { use, useContext } from "react";
 import { FiPhoneCall } from "react-icons/fi";
 import { GoDeviceCameraVideo } from "react-icons/go";
 import { IoArchive } from "react-icons/io5";
 import { MdDelete, MdOutlineTextsms } from "react-icons/md";
 import { RiNotificationSnoozeFill } from "react-icons/ri";
 import { useParams } from "react-router";
+import { listedFriendContext } from "../../../FriendContext/Context";
 
 // import React from 'react';
 const friendsPromise=fetch('/friendsData.json').then(res => res.json())
@@ -15,6 +16,10 @@ const FriendDetails = () => {
     // console.log(params)
     const friends=use(friendsPromise)
     console.log(friends)
+
+    const {handleCall,handleText,handleVideo}=useContext(listedFriendContext)
+    // console.log(handleCall)
+
     const FriendDetails=friends.find(friend=>friend.id==friendId)
     console.log(FriendDetails)
     return (
@@ -65,7 +70,6 @@ const FriendDetails = () => {
        </div>
     </div>
 
-    {/* Right Content */}
     <div className="md:col-span-2 space-y-8.5">
       {/* Stats */}
       <div className="grid grid-cols-3 gap-4">
@@ -115,18 +119,18 @@ const FriendDetails = () => {
       <div className="card bg-base-100 p-10 shadow">
         <h2 className="text-[#64748B] text-xl">Quick Check-In</h2>
              <div className="grid grid-cols-3 gap-4">
-        <div className="card bg-[#F8FAFC] p-8 shadow mt-6 text-center items-center text-xl">
+        <button onClick={()=>handleCall(FriendDetails)} className="btn h-[108px] bg-[#F8FAFC] p-8 shadow mt-6 text-center items-center text-xl">
             <FiPhoneCall />
             <h3>Call</h3>
-        </div>
-       <div className="card bg-[#F8FAFC] p-8 shadow mt-6 text-center items-center text-xl">
+        </button>
+       <button onClick={()=>handleText(FriendDetails)} className="btn bg-[#F8FAFC] h-[108px] p-8 shadow mt-6 text-center items-center text-xl">
         <MdOutlineTextsms />
         <h3>Text</h3>
-       </div>
-       <div className="card bg-[#F8FAFC] p-8 shadow mt-6 text-center items-center text-xl">
+       </button>
+       <button onClick={()=>handleVideo(FriendDetails)} className="btn h-[108px] bg-[#F8FAFC] p-8 shadow mt-6 text-center items-center text-xl">
         <GoDeviceCameraVideo />
         <h3>Video</h3>
-       </div>
+       </button>
       </div>
       </div>
      

@@ -20,7 +20,7 @@
     "status": "almost due",
     "tags": ["work", "mentor"],
     "bio": "Former teammate who always gives great career advice.",
-    "goal": 15,
+    "goal":  14,
     "next_due_date": "2026-06-02"
   },
   {
@@ -32,7 +32,7 @@
     "status": "on-track",
     "tags": ["gym", "fitness"],
     "bio": "Workout partner and basketball enthusiast.",
-    "goal": 17,
+    "goal":  14,
     "next_due_date": "2026-06-11"
   },
   {
@@ -44,7 +44,7 @@
     "status": "overdue",
     "tags": ["school", "best friend"],
     "bio": "Known since high school. Loves photography and travel.",
-    "goal": 20,
+    "goal":  14,
     "next_due_date": "2026-05-25"
   },
   {
@@ -56,7 +56,7 @@
     "status": "almost due",
     "tags": ["gaming", "online friend"],
     "bio": "Met through online gaming communities.",
-    "goal": 24,
+    "goal":  14,
     "next_due_date": "2026-06-04"
   },
   {
@@ -68,7 +68,7 @@
     "status": "on-track",
     "tags": ["university", "study partner"],
     "bio": "We worked on several engineering projects together.",
-    "goal": 22,
+    "goal":  14,
     "next_due_date": "2026-06-15"
   },
   {
@@ -80,7 +80,7 @@
     "status": "overdue",
     "tags": ["neighbor", "family friend"],
     "bio": "Family friend who recently moved to another city.",
-    "goal": 23,
+    "goal":  14,
     "next_due_date": "2026-05-31"
   },
   {
@@ -92,7 +92,7 @@
     "status": "on-track",
     "tags": ["book club", "creative"],
     "bio": "Enjoys reading, writing, and discussing new ideas.",
-    "goal": 30,
+    "goal":  14,
     "next_due_date": "2026-06-12"
   },
   {
@@ -104,7 +104,7 @@
     "status": "almost due",
     "tags": ["football", "college"],
     "bio": "Played football together during college years.",
-    "goal": 27,
+    "goal":  14,
     "next_due_date": "2026-06-01"
   },
   {
@@ -116,7 +116,7 @@
     "status": "overdue",
     "tags": ["travel", "photography"],
     "bio": "Travel companion who loves exploring new cultures.",
-    "goal": 31,
+    "goal":  14,
     "next_due_date": "2026-05-20"
   },
   {
@@ -128,7 +128,7 @@
     "status": "on-track",
     "tags": ["coding", "tech"],
     "bio": "Met at a hackathon and stayed in touch ever since.",
-    "goal": 5,
+    "goal": 14,
     "next_due_date": "2026-06-14"
   },
   {
@@ -140,7 +140,7 @@
     "status": "overdue",
     "tags": ["music", "childhood friend"],
     "bio": "Childhood friend who shares a passion for music.",
-    "goal": 4,
+    "goal": 14,
     "next_due_date": "2026-05-30"
   }
 ]
