@@ -10,9 +10,9 @@ const AllFriends = () => {
     console.log(friends)
 
     return (
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto mt-9 px-3">
             <h2 className="font-semibold text-[#1F2937] text-2xl">Your Friends</h2>
-            <div className="grid grid-cols-3 gap-4 mt-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
                 {
                     friends.map((friend,index)=>{
                         return(

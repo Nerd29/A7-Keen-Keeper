@@ -8,10 +8,10 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 const TimeLine = () => {
     const {storedFriends}=useContext(listedFriendContext)
 
-    const [sortType, setSortType] = useState("All");
-    const [searchText, setSearchText] = useState("");
+    const [sortType, setSortType] = useState("All");//sorting
+    const [searchText, setSearchText] = useState("");//filtering
      const sortedFriends =
-    sortType === "All"? storedFriends: storedFriends.sort((a,b) =>{if (a.actionType === sortType && b.actionType !== sortType)
+    sortType === "All"? storedFriends: [...storedFriends].sort((a,b) =>{if (a.actionType === sortType && b.actionType !== sortType)
           return -1;
 
         if (a.actionType !== sortType && b.actionType === sortType)
@@ -33,11 +33,14 @@ const TimeLine = () => {
             
     return (
         <div>
-            <h2 className="max-w-7xl mx-auto text-2xl text-[#244D3F] font-bold">Timeline</h2>
+            <div className=" max-w-7xl px-4 mx-auto">
+                <h2 className=" text-2xl  text-[#244D3F] font-bold">Timeline</h2>
+            </div>
+            
 
-            <div className="flex justify-between items-center max-w-7xl mx-auto">
+            <div className="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto">
                  <div className="mt-4">
-                <div className="dropdown  ">
+                <div className="dropdown">
                 <div tabIndex={0} role="button" className="btn m-1 gap-9 text-gray-400">{sortType==="All"?"Filter TimeLine":sortType}<span className="text-2xl text-gray-400"><RiArrowDropDownLine /></span></div>
                 <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm font-semibold">
                     <li><a onClick={()=>setSortType("Call")}>Call</a></li>
@@ -47,7 +50,7 @@ const TimeLine = () => {
             </div>
             </div>
             <div className="mt-4">
-                <label className="input bg-gray-100">
+                <label className="input bg-gray-100 w-full md:w-auto">
                 <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <g
                     strokeLinejoin="round"
@@ -69,7 +72,7 @@ const TimeLine = () => {
            
             
         
-        <div className='container mx-auto space-y-5'>
+        <div className='max-w-7xl mx-auto space-y-5 px-4'>
             {
             filteredFriends.map((friend,index)=>{
                 return (
