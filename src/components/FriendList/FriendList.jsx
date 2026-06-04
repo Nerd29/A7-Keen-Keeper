@@ -1,4 +1,7 @@
 // import React from 'react';
+import callImage from '../../assets/call.png'
+import textImage from '../../assets/text.png'
+import videoImage from '../../assets/video.png'
 
 const FriendList = ({friend}) => {
     return (
@@ -9,10 +12,10 @@ const FriendList = ({friend}) => {
     className=""
     src={
       friend.actionType === "Call"
-        ? "/assets/call.png"
+        ? callImage
         : friend.actionType === "Text"
-        ? "/assets/text.png"
-        : "/assets/video.png"
+        ? textImage
+        : videoImage
     }
     alt={friend.actionType}
   />

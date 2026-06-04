@@ -72,7 +72,7 @@ const FriendDetails = () => {
 
     <div className="md:col-span-2 space-y-8.5">
       {/* Stats */}
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
   <div className="card bg-base-100 p-9 shadow">
     <h3 className="text-4xl font-bold text-center">
       {FriendDetails.days_since_contact}
@@ -102,7 +102,7 @@ const FriendDetails = () => {
 </div>
       {/* Goal */}
       <div className="card bg-base-100 p-12 shadow ">
-        <div className="flex justify-between">
+        <div className="flex flex-col gap-4 md:flex-row justify-between">
             <div className="space-y-4">
                 <h2 className="font-bold">Relationship Goal</h2>
         <p className="text-[#64748B]">Connect every <span className="text-[#244D3F]">{FriendDetails.goal} days</span></p>
@@ -118,7 +118,7 @@ const FriendDetails = () => {
       {/* Quick Check-In */}
       <div className="card bg-base-100 p-10 shadow">
         <h2 className="text-[#64748B] text-xl">Quick Check-In</h2>
-             <div className="grid grid-cols-3 gap-4">
+             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <button onClick={()=>handleCall(FriendDetails)} className="btn h-[108px] bg-[#F8FAFC] p-8 shadow mt-6 text-center items-center text-xl">
             <FiPhoneCall />
             <h3>Call</h3>
