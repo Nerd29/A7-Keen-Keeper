@@ -1,7 +1,7 @@
 // import React from 'react';
 
 import { useContext } from "react";
-import { Legend, Pie, PieChart, Tooltip } from "recharts";
+import { Legend, Pie, PieChart, Tooltip,ResponsiveContainer } from "recharts";
 import { listedFriendContext } from "../../../FriendContext/Context";
 
 
@@ -16,26 +16,26 @@ const Stats = () => {
         ];
     return (
          
-        <div className="m-30">
-            <h2 className="text-4xl font-bold max-w-7xl mx-auto mb-5">Friendship Analytics</h2>
-            <div className="bg-white shadow-sm p-9 max-w-7xl mx-auto ">
+        <div className="my-10 md:my-20 px-4">
+            <h2 className="text-2xl md:text-4xl font-bold max-w-7xl mx-auto mb-5">Friendship Analytics</h2>
+            <div className="bg-white shadow-sm p-4 md:p-9 max-w-7xl mx-auto rounded-xl">
             <h2 className="font-semibold text-2xl">By Interaction type</h2>
-            <PieChart style={{ width: '100%', maxWidth: '500px',margin:'auto', maxHeight: '80vh', aspectRatio: 1 }} responsive>
-      <Pie
-        data={data}
-        innerRadius="80%"
-        outerRadius="100%"
-        // Corner radius is the rounded edge of each pie slice
-        cornerRadius="50%"
-        fill="#8884d8"
-        // padding angle is the gap between each pie slice
-        paddingAngle={5}
-        dataKey="value"
-        isAnimationActive={true}
-      />
-      <Legend/>
-      <Tooltip/>
-    </PieChart>
+            <div className="w-full h-[300px] md:h-[500px]">
+                <ResponsiveContainer width="100%" height="100%">
+                    <PieChart>
+                    <Pie
+                        data={data}
+                        dataKey="value"
+                        innerRadius="60%"
+                        outerRadius="85%"
+                        paddingAngle={5}
+                        cornerRadius={10}
+                    />
+                        <Tooltip />
+                        <Legend />
+                        </PieChart>
+                    </ResponsiveContainer>
+            </div>
          </div>
         </div>
     );
