@@ -10,12 +10,7 @@ A personal relationship management tool to stay connected with friends and nurtu
 - [Key Features](#key-features)
 - [Tech Stack](#tech-stack)
 - [Dependencies](#dependencies)
-- [Installation & Setup](#installation--setup)
-- [Folder Structure](#folder-structure)
-- [Contributions](#contributions)
-- [How to Contribute](#how-to-contribute)
-- [License](#license)
-- [Contact](#contact)
+
 
 ---
 
