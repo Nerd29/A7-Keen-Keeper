@@ -1,5 +1,5 @@
-# Keen Keeper — Smart Inventory & Asset Management System
-A modern, full-stack inventory and asset management web application designed to help organizations seamlessly track, manage, and assign equipment, devices, and company assets.
+# KeenKeeper  
+A personal relationship management tool to stay connected with friends and nurture meaningful connections.
 
 ---
 
@@ -20,8 +20,50 @@ A modern, full-stack inventory and asset management web application designed to 
 ---
 
 ## About the Project 
-**Keen Keeper** is an intuitive inventory and asset management platform built to streamline equipment tracking and employee requests. Managing company hardware, office furniture, and digital assets often leads to lost items, unorganized allocation, and poor visibility into item stock. 
+**KeenKeeper** is your personal shelf of meaningful connections. In a busy world, it is easy to lose touch with close friends, college mates, and loved ones. KeenKeeper helps you monitor when you last contacted someone, set custom relationship goals, and send quick check-ins so you never let important relationships fade away.
 
+---
+
+## Project Overview  
+KeenKeeper provides an intuitive dashboard to keep track of your friendships and social health metrics:
+
+- **Friends Summary Dashboard:** Track metrics like *Total Friends*, *On Track*, and *Need Attention*.
+- **Contact Tracking:** Automatically calculates **Days Since Contact** against defined relationship goals (e.g. 14 days).
+- **Overdue Alerts:** Highlights contacts who are overdue for a catch-up.
+- **Actionable Check-ins:** Offers quick communication triggers (**Call**, **Text**, **Video**) directly from the contact card.
+
+---
+
+## Key Features  
+- **Friend Profiles & Tagging:** Add friends with customized tags (e.g., `college`, `close friend`), notes, and emails.
+- **Relationship Goal Setting:** Define individual check-in goals (e.g., connect every 14 days) and view next due dates.
+- **Days Since Contact Counter:** Dynamic tracking of time elapsed since your last catch-up.
+- **Status Dashboard:** Instantly see which friends are *On Track* vs. those who *Need Attention* / *Overdue*.
+- **Quick Check-In Actions:** One-click shortcuts to Call, Text, or Video call your friends.
+- **Snooze, Archive & Delete:** Flexible options to snooze reminders (e.g., Snooze 2 weeks), archive inactive contacts, or clean up your list.
+
+---
+
+## Tech Stack  
+**Frontend:** React.js · Tailwind CSS · Lucide React  
+**Backend:** Node.js · Express.js · MongoDB  
+**Tools & Hosting:** Git · VS Code · Netlify (Client) · Vercel (Server)
+
+---
+
+## Dependencies  
+
+List required dependencies:
+
+```json
+{
+  "react": "^18.x",
+  "react-dom": "^18.x",
+  "react-router-dom": "^6.x",
+  "lucide-react": "^0.x",
+  "axios": "^1.x",
+  "tailwindcss": "^3.x"
+}
 Keen Keeper solves this by providing role-based dashboards for **HR/Managers** and **Employees**, allowing seamless asset requests, automated approvals, real-time inventory tracking, and transparent reporting.
 
 ---
